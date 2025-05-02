@@ -1,0 +1,64 @@
+Interface       	Abstract        Method	Description
+Function<T, R>	    R apply(T t)	Takes T, returns R
+Predicate<T>	    boolean test(T) Returns true/false
+Consumer<T>	        void accept(T)	Takes T, returns nothing
+Supplier<T>	        T get()	        Returns a value of type T
+
+
+
+
+Absolutely! Here's the list of **predefined functional interfaces in Java**, along with **brief explanations** for each:
+
+---
+
+## ✅ Predefined Functional Interfaces (Single Argument)
+
+| Interface     | Signature                 | Description |
+|---------------|---------------------------|-------------|
+| `Predicate<T>` | `T → boolean`             | Tests a condition on an input and returns `true` or `false`. Commonly used for filtering. |
+| `Function<T, R>` | `T → R`                 | Takes an input of type `T` and returns a result of type `R`. |
+| `Consumer<T>` | `T → void`                | Performs an action on an input value without returning anything. |
+| `Supplier<T>` | `() → T`                  | Provides a result without taking any input (often used for lazy evaluation or value generation). |
+
+---
+
+## ✅ Two-Argument Predefined Functional Interfaces
+
+| Interface           | Signature                 | Description |
+|---------------------|---------------------------|-------------|
+| `BiPredicate<T, U>` | `(T, U) → boolean`         | Tests a condition using two inputs and returns a boolean result. |
+| `BiFunction<T, U, R>` | `(T, U) → R`            | Takes two inputs and produces a result. |
+| `BiConsumer<T, U>`  | `(T, U) → void`            | Performs an action on two input arguments without returning anything. |
+
+---
+
+## ✅ Primitive Functional Interfaces
+
+Used to avoid boxing/unboxing of primitive types like `int`, `long`, `double`.
+
+| Interface         | Signature            | Description |
+|-------------------|----------------------|-------------|
+| `IntPredicate`    | `int → boolean`      | Like `Predicate`, but for `int` values. |
+| `IntFunction<R>`  | `int → R`            | Takes an `int` and returns a result of type `R`. |
+| `IntConsumer`     | `int → void`         | Consumes an `int` input and performs an operation. |
+| `...`             | (more: `LongPredicate`, `DoubleFunction`, etc.) | Specializations for other primitives. |
+
+---
+
+### 🧠 Quick Use Case Example:
+
+```java
+Predicate<String> isEmpty = str -> str.isEmpty();
+System.out.println(isEmpty.test(""));  // true
+
+Function<Integer, String> intToStr = i -> "Number: " + i;
+System.out.println(intToStr.apply(5));  // Number: 5
+
+Consumer<String> printer = s -> System.out.println(s);
+printer.accept("Hello!");  // prints Hello!
+
+Supplier<Double> random = () -> Math.random();
+System.out.println(random.get());  // random number
+```
+
+Would you like this in a downloadable format (PDF or DOC)?

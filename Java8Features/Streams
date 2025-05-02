@@ -1,0 +1,13 @@
+ Stream API Method Cheat Sheet
+ 
+Method	 				Description													Type
+stream()				Converts a collection to a stream.							Entry point
+filter(Predicate)		Filters elements based on a condition.						Intermediate
+map(Function)			Transforms each element.									Intermediate
+collect(Collector)		Converts the stream into a collection (List, Set, etc.).	Terminal
+count()					Returns the number of elements.								Terminal
+sorted()				Sorts the elements in natural order.						Intermediate
+sorted(Comparator)		Sorts using a custom comparator.							Intermediate
+min(Comparator)			Finds the minimum element.									Terminal
+max(Comparator)			Finds the maximum element.									Terminal
+forEach(Consumer)		Performs an action on each element.							Terminal
