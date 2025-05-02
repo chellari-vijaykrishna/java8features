@@ -19,6 +19,7 @@ public class ClassAA {
 		System.out.println(time.getMinute());
 		System.out.println(time.getSecond());
 		System.out.println(time.getHour());
+		System.out.println(time.getHour());
 		
 		LocalDateTime ldt = LocalDateTime.now();
 		System.out.println(ldt.getYear());
