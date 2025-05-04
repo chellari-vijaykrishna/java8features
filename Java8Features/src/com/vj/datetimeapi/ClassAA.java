@@ -28,7 +28,7 @@ public class ClassAA {
 		System.out.println(ldt.getMinute());
 		System.out.println(ldt.getSecond());
 		System.out.println(ldt.getHour());
-		
+	
 		LocalDate dateOfBirth = LocalDate.of(2000,Month.AUGUST, 26);
 		
 		Period period = Period.between(dateOfBirth, date);
